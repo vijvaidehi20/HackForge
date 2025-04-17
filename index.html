@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForecastFlow - Automated Demand Forecasting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkNavy: '#FFBA08',
+            wine: '#FAA307',
+            blood: '#F48C06',
+            crimson: '#E85D04',
+            alertRed: '#DC2F02',
+            flame: '#D00000',
+            sunset: '#9D0208',
+            mango: '#6A040F',
+            amber: '#370617',
+            gold: '#03071E',
+            primary: '#03071E',
+            background: '#FFBA08',
+            surface: '#FAA307',
+            accent: '#9D0208',
+            text: '#000000',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadeUp: 'fadeUp 0.8s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    [x-cloak] { display: none; }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-light text-gray-800 font-sans">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-6 border-b border-orange-200 bg-orange-50 shadow-sm">
+    <div class="text-xl font-bold text-primary">ForecastFlow</div>
+    <nav class="space-x-2 hidden md:flex">
+      <a href="#features" class="px-3 py-1 rounded-md transition hover:bg-orange-100 hover:text-primary">Features</a>
+      <a href="#pricing" class="px-3 py-1 rounded-md transition hover:bg-orange-100 hover:text-primary">Pricing</a>
+      <a href="#testimonials" class="px-3 py-1 rounded-md transition hover:bg-orange-100 hover:text-primary">Testimonials</a>
+      <a href="#contact" class="px-3 py-1 rounded-md transition hover:bg-orange-100 hover:text-primary">Contact</a>
+    </nav>    
+    <div class="space-x-4">
+      <button class="px-4 py-2 border border-primary rounded hover:bg-primary hover:text-white transition">Sign In</button>
+      <button class="px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-accent transition">Start Free Trial</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-6 md:px-24 bg-orange-50 fade-up">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Smarter Inventory, Predictable Growth</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-8">ForecastFlow uses real-time AI to optimize your inventory and boost demand forecasting accuracy by 85%.</p>
+    <a href="#pricing" class="inline-block px-6 py-3 bg-primary text-white text-lg font-semibold rounded hover:bg-accent transition">Get Started Free</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-24 py-20 bg-[#ffedd5] fade-up">
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold mb-2 text-primary">Real-Time Forecasting</h3>
+      <p class="text-gray-700">Track demand patterns live and adjust your inventory accordingly.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold mb-2 text-primary">Smart Alerts</h3>
+      <p class="text-gray-700">Get notified before stockouts or overstock situations happen.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold mb-2 text-primary">Retail-Ready Insights</h3>
+      <p class="text-gray-700">Beautiful dashboards built for store managers, not data scientists.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 px-6 md:px-24 bg-orange-100 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-orange-50 p-6 rounded-lg shadow-sm">
+        <p class="italic text-gray-800">"ForecastFlow reduced our dead stock by 45% in just 3 months. Game-changer!"</p>
+        <p class="mt-4 font-semibold text-primary">— Maya, Retail Lead</p>
+      </div>
+      <div class="bg-orange-50 p-6 rounded-lg shadow-sm">
+        <p class="italic text-gray-800">"Finally, forecasting that doesn’t need a PhD to understand."</p>
+        <p class="mt-4 font-semibold text-primary">— Liam, Store Manager</p>
+      </div>
+      <div class="bg-orange-50 p-6 rounded-lg shadow-sm">
+        <p class="italic text-gray-800">"Our team saves hours every week thanks to the smart automations."</p>
+        <p class="mt-4 font-semibold text-primary">— Priya, Inventory Analyst</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 px-6 md:px-24 bg-[#ffedd5] fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">Simple Pricing for Indian Businesses</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-lg text-center shadow-md">
+        <h3 class="text-xl font-semibold mb-2 text-primary">Starter</h3>
+        <p class="text-3xl font-bold mb-4 text-orange-600">₹499/mo</p>
+        <p class="text-gray-700 mb-6">Ideal for small stores just getting started.</p>
+        <button class="w-full bg-primary text-white py-2 rounded hover:bg-accent">Start Trial</button>
+      </div>
+      <div class="bg-white p-8 rounded-lg text-center shadow-md ring-2 ring-primary">
+        <h3 class="text-xl font-semibold mb-2 text-primary">Growth</h3>
+        <p class="text-3xl font-bold mb-4 text-orange-600">₹1,299/mo</p>
+        <p class="text-gray-800 mb-6">Best for growing multi-location retailers.</p>
+        <button class="w-full bg-primary text-white py-2 rounded hover:bg-accent">Start Trial</button>
+      </div>
+      <div class="bg-white p-8 rounded-lg text-center shadow-md">
+        <h3 class="text-xl font-semibold mb-2 text-primary">Enterprise</h3>
+        <p class="text-3xl font-bold mb-4 text-orange-600">Custom</p>
+        <p class="text-gray-700 mb-6">Custom plans for large-scale operations.</p>
+        <button class="w-full bg-primary text-white py-2 rounded hover:bg-accent">Contact Us</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="py-16 px-6 md:px-24 bg-orange-50 border-t border-orange-200 fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Your Data. Your Control.</h2>
+      <p class="text-gray-700 mb-6">We take security seriously. ForecastFlow is built with industry-standard encryption and follows best practices for privacy and compliance. Your business insights stay yours — always.</p>
+      <div class="flex flex-wrap justify-center gap-4 mt-4 text-sm text-gray-600">
+        <span class="px-4 py-2 border border-gray-300 rounded-full">256-bit Encryption</span>
+        <span class="px-4 py-2 border border-gray-300 rounded-full">GDPR-Ready</span>
+        <span class="px-4 py-2 border border-gray-300 rounded-full">Data Stored in India</span>
+        <span class="px-4 py-2 border border-gray-300 rounded-full">No Third-Party Selling</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="py-12 text-center text-orange-800 bg-orange-50 border-t border-orange-200">
+    <p>&copy; 2025 ForecastFlow. All rights reserved.</p>
+  </footer>
+
+  <!-- Chatbot Button & Popup -->
+  <button 
+    id="chatbotBtn"
+    class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-accent transition"
+    aria-label="Chat with us"
+  >
+    💬
+  </button>
+
+  <div 
+    id="chatPopup" 
+    class="fixed bottom-20 right-6 bg-white border border-orange-300 rounded-xl shadow-lg w-80 p-4 hidden"
+  >
+    <h3 class="font-semibold text-primary mb-2">Need help?</h3>
+    <p class="text-sm text-gray-700 mb-3">Ask us anything about inventory, pricing, or setup.</p>
+    <input 
+      type="text" 
+      placeholder="Type your message…" 
+      class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-orange-200"
+    />
+  </div>
+
+  <script>
+    const chatbotBtn = document.getElementById('chatbotBtn');
+    const chatPopup = document.getElementById('chatPopup');
+
+    chatbotBtn.addEventListener('click', () => {
+      chatPopup.classList.toggle('hidden');
+    });
+
+    const animatedEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animatedEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
